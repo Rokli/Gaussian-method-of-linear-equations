@@ -3,4 +3,5 @@ project(GaussianMethodSolve)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(GaussianMethodSolve main.cpp)
+add_executable(GaussianMethodSolve main.cpp
+        GaussMethod.h)
