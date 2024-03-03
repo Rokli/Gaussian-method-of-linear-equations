@@ -1,0 +1,3 @@
+/home/hikiray/CLionProjects/GaussianMethodSolve/cmake-build-debug/CMakeFiles/GaussianMethodSolve.dir
+/home/hikiray/CLionProjects/GaussianMethodSolve/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hikiray/CLionProjects/GaussianMethodSolve/cmake-build-debug/CMakeFiles/rebuild_cache.dir
