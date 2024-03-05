@@ -6,12 +6,6 @@ int main() {
           {1.799999,3,7},
           {8,1,1}
         };
-    float matrixB[3][1]
-        {
-            {12},
-            {13.599998},
-            {18},
-        };
     float matrixBarray[]{12,13.599998,18};
     int rows = 3;
     int cols = 3;

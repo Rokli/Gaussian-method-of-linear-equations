@@ -34,7 +34,6 @@ public:
             }
             float divider = matrixA[i][i];
             for(int j = 0; j < rows+1; j++){
-                float tmp = matrixA[i][j];
                 matrixA[i][j] = matrixA[i][j]/ divider;
             }
             for (int j = i+1; j < rows; ++j) {// следующую строку превращаем
