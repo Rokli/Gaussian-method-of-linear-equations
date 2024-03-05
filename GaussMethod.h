@@ -20,7 +20,6 @@ private:
 public:
     static void StartMethod(float **matrixA, float **matrixB, int rows) {
         float **matrixCloneA = matrixA;
-        int count = 0;
         for(int i = 0; i < rows-1;i++){ // строка первая
             for(int j = 0; j < rows; j++){ // проверка на нулевой элемент
                 if(matrixA[j][i] != 0){
@@ -29,7 +28,7 @@ public:
             }
             for (int j = i+1; j < rows; ++j) {// следующую строку превращаем
                 float cup = matrixA[j][i];
-                for(int k = i;k < rows; k++){
+                for(int k = i;k < rows-1; k++){
 //                    float numberTwo = -matrixA[j][k];
                     float numberTwo = -cup;
                     float numberOne = matrixA[0][i];
@@ -37,8 +36,8 @@ public:
                     matrixA[j][k] += tmp;
                 }
             }
-            count++;
         }
+
         for(int i = 0; i < rows;i++ ){
             for (int j = 0; j < rows; ++j) {
                 cout << matrixA[i][j] << "  ";
