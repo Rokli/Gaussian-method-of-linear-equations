@@ -10,12 +10,9 @@ public:
         for(int i = 0; i < rows;i++){ // строка первая
             for(int j = 0; j < rows; j++){ // проверка на нулевой элемент
                 if(matrixA[j][i] != 0){
+                    matrixA = ChangingLines(matrixA,rows,j);
                     break;
                 }
-            }
-            float divider = matrixA[i][i];
-            for(int j = 0; j < rows+1; j++){
-                matrixA[i][j] = matrixA[i][j]/ divider;
             }
             for (int j = i+1; j < rows; ++j) {// следующую строку превращаем
                 float tmp = -matrixA[j][i]/matrixA[i][i];
@@ -46,6 +43,18 @@ public:
             }
             cout << endl;
         }
+        cout << endl;
+    }
+    static void ChoiceMainGauss(float** matrix, int rows){
+
+    }
+    static float** ChangingLines(float** matrix, int rows,int col){
+            for(int j = 0; j < rows+1; j++){
+                float tmp = matrix[0][j];
+                matrix[0][j] = matrix[col][j];
+                matrix[col][j] = tmp;
+            }
+        return matrix;
     }
 };
 #endif SOLVINGLINEARMETHODSGAUSSIAN_METHOD_GAUSSMETHOD_H
