@@ -22,5 +22,6 @@ int main() {
         matrixA[i][rows] = matrixBarray[i];
     }
     GaussMethod::StartMethod(matrixA,3);
+   // GaussMethod::ChoiceMainGauss(matrixA,3);
     return 0;
 }
