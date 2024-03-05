@@ -18,27 +18,33 @@ private:
 //            {18},
 //        };
 public:
-    static void StartMethod(float** matrixA,float** matrixB,int rows,int cols){
-        float** matrixCloneA = matrixA;
-        for(int i = 0; i < rows; i++){
-            matrixCloneA[i] = new float[cols];
+    static void StartMethod(float **matrixA, float **matrixB, int rows) {
+        float **matrixCloneA = matrixA;
+        int count = 0;
+        for(int i = 0; i < rows-1;i++){ // строка первая
+            for(int j = 0; j < rows; j++){ // проверка на нулевой элемент
+                if(matrixA[j][i] != 0){
+                    break;
+                }
+            }
+            for (int j = i+1; j < rows; ++j) {// следующую строку превращаем
+                float cup = matrixA[j][i];
+                for(int k = i;k < rows; k++){
+//                    float numberTwo = -matrixA[j][k];
+                    float numberTwo = -cup;
+                    float numberOne = matrixA[0][i];
+                    float tmp = numberOne * (numberTwo/numberOne);
+                    matrixA[j][k] += tmp;
+                }
+            }
+            count++;
         }
-        for(int k = 0; k < rows; k++){
-            for (int i = 0; k < rows + 1; k++){
-                matrixCloneA[k][i] = matrixB[k][i] / matrixA[k][k];
+        for(int i = 0; i < rows;i++ ){
+            for (int j = 0; j < rows; ++j) {
+                cout << matrixA[i][j] << "  ";
             }
-            for(int i = 0; k < rows+1; k++)
-            {
-                double K = matrixCloneA[i][ k] / matrixCloneA[k][k];
-                for (int j = 0; j < rows + 1; j++)
-                    matrixCloneA[i][ j] = matrixCloneA[i][j] - matrixCloneA[k][j] * K;
-            }
-            for (int i = 0; i < rows; i++) //Обновление, внесение изменений в начальную матрицу
-                for (int j = 0; j < rows + 1; j++)
-                    matrixA[i][ j] = matrixCloneA[i][ j];
+            cout << endl;
         }
     }
 };
-
-
-#endif //SOLVINGLINEARMETHODSGAUSSIAN_METHOD_GAUSSMETHOD_H
+#endif SOLVINGLINEARMETHODSGAUSSIAN_METHOD_GAUSSMETHOD_H
