@@ -4,27 +4,8 @@
 using  namespace  std;
 
 class GaussMethod {
-private:
-
-//        float matrixA[3][3]
-//        { {3,5,1},
-//          {1.799999,3,7,},
-//          {8,1,1}
-////        };
-//        float matrixB[3][1]
-//        {
-//            {12},
-//            {13.599998},
-//            {18},
-//        };
 public:
-    static void StartMethod(float **matrixA, float **matrixB, int rows) {
-        for(int i = 0; i < rows;i++ ){
-            for (int j = 0; j < rows+1; ++j) {
-                cout << matrixA[i][j] << "  ";
-            }
-            cout << endl;
-        }
+    static void StartMethod(float **matrixA,int rows) {
         cout << endl;
         for(int i = 0; i < rows;i++){ // строка первая
             for(int j = 0; j < rows; j++){ // проверка на нулевой элемент
