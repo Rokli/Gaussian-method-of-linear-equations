@@ -1,12 +1,14 @@
 #include <iostream>
 #include "GaussMethod.h"
+#include "SimpleIterationMethod.h"
+
 int main() {
     float matrixCreate[3][3]
-        { {3,5,1},
-          {1.799999,3,7},
-          {8,1,1}
+        { {10,2,1},
+          {5,30,6},
+          {-3,4,20}
         };
-    float matrixBarray[]{12,13.599998,18};
+    float matrixBarray[]{15,53,61};
     int rows = 3;
     float** matrixA;
     matrixA = static_cast<float **>(calloc(rows+1, sizeof(float *)));
@@ -21,6 +23,8 @@ int main() {
     for(int i = 0;i < rows; i++){
         matrixA[i][rows] = matrixBarray[i];
     }
+
+    SimpleIterationMethod::Start(matrixA,rows);
     //GaussMethod::StartMethod(matrixA,3);
     //GaussMethod::ChoiceMainGauss(matrixA,3);
     return 0;
