@@ -6,4 +6,8 @@ set(CMAKE_CXX_STANDARD 23)
 add_executable(GaussianMethodSolve main.cpp
         GaussMethod.h
         SimpleIterationMethod.cpp
-        SimpleIterationMethod.h)
+        SimpleIterationMethod.h
+        PassingMethod.cpp
+        PassingMethod.h
+        MatrixAB.cpp
+        MatrixAB.h)

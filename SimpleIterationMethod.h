@@ -13,7 +13,7 @@ class SimpleIterationMethod {
 public:
     static void Start(float** matrix, int rows){
         int counter = 0;
-        float eps = 0.001;
+        float eps = 0.000001;
         float x1 = matrix[0][rows]/matrix[0][0];
         float prevx1 = 0;
         float x2 = matrix[1][rows]/matrix[1][1];
@@ -28,7 +28,7 @@ public:
             x2 = TwoFunc(prevx1,prevx3);
             x3 = ThreeFunc(prevx1,prevx2);
             counter++;
-        }while(abs(x1 - prevx1) > eps && abs(x2 - prevx2) > eps && abs(x3 - prevx3) > eps);
+        }while(abs(prevx1 - x1) > eps && abs(prevx2 - x2) > eps && abs(prevx3 - x3) > eps);
         cout << "x1: " << x1 << endl;
         cout << "x2: " << x2 << endl;
         cout << "x3: " << x3 << endl;

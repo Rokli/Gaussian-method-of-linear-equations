@@ -61,6 +61,18 @@ build CMakeFiles/GaussianMethodSolve.dir/SimpleIterationMethod.cpp.o: CXX_COMPIL
   OBJECT_DIR = CMakeFiles/GaussianMethodSolve.dir
   OBJECT_FILE_DIR = CMakeFiles/GaussianMethodSolve.dir
 
+build CMakeFiles/GaussianMethodSolve.dir/PassingMethod.cpp.o: CXX_COMPILER__GaussianMethodSolve_unscanned_Debug /home/hikiray/CLionProjects/GaussianMethodSolve/PassingMethod.cpp || cmake_object_order_depends_target_GaussianMethodSolve
+  DEP_FILE = CMakeFiles/GaussianMethodSolve.dir/PassingMethod.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/GaussianMethodSolve.dir
+  OBJECT_FILE_DIR = CMakeFiles/GaussianMethodSolve.dir
+
+build CMakeFiles/GaussianMethodSolve.dir/MatrixAB.cpp.o: CXX_COMPILER__GaussianMethodSolve_unscanned_Debug /home/hikiray/CLionProjects/GaussianMethodSolve/MatrixAB.cpp || cmake_object_order_depends_target_GaussianMethodSolve
+  DEP_FILE = CMakeFiles/GaussianMethodSolve.dir/MatrixAB.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/GaussianMethodSolve.dir
+  OBJECT_FILE_DIR = CMakeFiles/GaussianMethodSolve.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target GaussianMethodSolve
@@ -69,7 +81,7 @@ build CMakeFiles/GaussianMethodSolve.dir/SimpleIterationMethod.cpp.o: CXX_COMPIL
 #############################################
 # Link the executable GaussianMethodSolve
 
-build GaussianMethodSolve: CXX_EXECUTABLE_LINKER__GaussianMethodSolve_Debug CMakeFiles/GaussianMethodSolve.dir/main.cpp.o CMakeFiles/GaussianMethodSolve.dir/SimpleIterationMethod.cpp.o
+build GaussianMethodSolve: CXX_EXECUTABLE_LINKER__GaussianMethodSolve_Debug CMakeFiles/GaussianMethodSolve.dir/main.cpp.o CMakeFiles/GaussianMethodSolve.dir/SimpleIterationMethod.cpp.o CMakeFiles/GaussianMethodSolve.dir/PassingMethod.cpp.o CMakeFiles/GaussianMethodSolve.dir/MatrixAB.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/GaussianMethodSolve.dir
   POST_BUILD = :
