@@ -26,7 +26,7 @@ int main() {
 //        matrixA[i][rows] = matrixBarray[i];
 //    }
     MatrixAB matrix = MatrixAB();
-    PassingMethod::Start(matrix.GetMatrixC(),5);
+    PassingMethod::Start(matrix.GetMatrixC(),matrix.rowsC);
     //SimpleIterationMethod::Start(matrixA,rows);
     //GaussMethod::StartMethod(matrixA,3);
     //GaussMethod::ChoiceMainGauss(matrixA,3);

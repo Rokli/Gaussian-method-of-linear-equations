@@ -10,7 +10,6 @@
 
 class MatrixAB {
 private:
-    int rows = 3;
     float matrixB[3][3]
             { {10,2,1},
               {5,30,6},
@@ -23,7 +22,6 @@ private:
               {8,1,1}
             };
     float matrixAsv[3]{12,13.599998,18};
-    int rowsC  = 5;
     float matrixC[5][5]
             { {8,-2,0,0,0},
               {-1,5,3,0,0},
@@ -33,6 +31,8 @@ private:
             };
     float matrixCsv[5]{-7,6,9,-8,5};
 public:
+    int rows = 3;
+    int rowsC  = 5;
     float** GetMatrixB(){
         float** matrix;
         matrix = static_cast<float **>(calloc(rows+1, sizeof(float *)));

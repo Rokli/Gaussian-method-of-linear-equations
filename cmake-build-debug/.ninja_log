@@ -15,3 +15,7 @@
 0	288	1709690927990480898	CMakeFiles/GaussianMethodSolve.dir/PassingMethod.cpp.o	16557a5288362083
 0	296	1709690927997480940	CMakeFiles/GaussianMethodSolve.dir/main.cpp.o	b1a5415d51e7e2e5
 296	337	1709690928037481177	GaussianMethodSolve	647177f4b113b77a
+1	22	1709691172496928749	CMakeFiles/GaussianMethodSolve.dir/MatrixAB.cpp.o	3b29843cf386605e
+1	286	1709691172760930312	CMakeFiles/GaussianMethodSolve.dir/PassingMethod.cpp.o	16557a5288362083
+1	302	1709691172776930407	CMakeFiles/GaussianMethodSolve.dir/main.cpp.o	b1a5415d51e7e2e5
+302	342	1709691172815930638	GaussianMethodSolve	647177f4b113b77a
