@@ -7,8 +7,8 @@
 int main() {
     MatrixAB matrix = MatrixAB();
     //PassingMethod::Start(matrix.GetMatrixC(),matrix.rowsC);
-    SimpleIterationMethod::StartUniform(matrix.GetMatrixB(),matrix.rows);
-    //GaussMethod::StartMethod(matrixA,3);
-    //GaussMethod::ChoiceMainGauss(matrixA,3);
+    //SimpleIterationMethod::StartUniform(matrix.GetMatrixB(),matrix.rows);
+    //GaussMethod::StartMethod(matrix.GetMatrixA(),3);
+    //GaussMethod::ChoiceMainGauss(matrix.GetMatrixA(),3);
     return 0;
 }
