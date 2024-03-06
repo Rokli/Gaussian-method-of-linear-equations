@@ -74,6 +74,19 @@ public:
         }
         cout << counter << endl;
     }
+    static bool Check(float** matrix,int rows){
+        bool flag = true;
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < rows; j++){
+                if(i != j)
+                    if(matrix[i][i] < matrix[i][j]){
+                        cout << "Матрица не сойдётся";
+                        flag = false;
+                    }
+            }
+        }
+        return flag;
+    }
 };
 
 
