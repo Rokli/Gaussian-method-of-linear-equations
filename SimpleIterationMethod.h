@@ -43,6 +43,37 @@ public:
     static float ThreeFunc(float x1, float x2){
         return (61 + 3 * x1 - 4 * x2)/20;
     }
+    static void StartUniform(float** matrix, int rows){
+        int counter = 0;
+        float eps = 0.001;
+        float answer[rows];
+        float prevAnswer[rows];
+        bool flag = true;
+        for(int i = 0; i < rows;i++)
+            prevAnswer[i] = matrix[i][rows]/matrix[i][i];
+        do{
+            for(int i = 0; i < rows;i++) {
+                answer[i] =  matrix[i][rows]/matrix[i][i];
+                for(int j = 0; j < rows; j++){
+                    if(i == j)
+                        continue;
+                    else
+                        answer[i] -= matrix[i][j] / matrix[i][i] * prevAnswer[j];
+                }
+            }
+            for(int i = 0; i < rows; i++){
+                if(prevAnswer[i] - answer[i] > eps)
+                    flag = false;
+            }
+            for(int i = 0; i < rows+1;i++)
+                prevAnswer[i] = answer[i];
+            counter++;
+        }while(flag);
+        for(float i: answer){
+            cout << i << endl;
+        }
+        cout << counter << endl;
+    }
 };
 
 
