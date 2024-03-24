@@ -10,12 +10,13 @@
 
 class MatrixAB {
 private:
-    float matrixB[3][3]
-            { {10,2,1},
-              {5,30,6},
-              {-3,4,20}
+    float matrixB[4][4]
+            { {10,1,1,1},
+              {2,14,3,-2},
+              {1,2,15,1},
+              {-1,3,2,20}
             };
-    float matrixBsv[3]{15,53,61};
+    float matrixBsv[4]{13,17,19,24};
     float matrixA[3][3]
             { {3,5,1},
               {1.799999,3,7},
@@ -31,7 +32,7 @@ private:
             };
     float matrixCsv[5]{-7,6,9,-8,5};
 public:
-    int rows = 3;
+    int rows = 4;
     int rowsC  = 5;
     float** GetMatrixB(){
         float** matrix;

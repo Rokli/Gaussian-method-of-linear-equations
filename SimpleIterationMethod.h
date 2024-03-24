@@ -13,7 +13,7 @@ class SimpleIterationMethod {
 public:
     static void Start(float** matrix, int rows){
         int counter = 0;
-        float eps = 0.000001;
+        float eps = 0.001;
         float x1 = matrix[0][rows]/matrix[0][0];
         float prevx1 = 0;
         float x2 = matrix[1][rows]/matrix[1][1];
@@ -45,7 +45,7 @@ public:
     }
     static void StartUniform(float** matrix, int rows){
         int counter = 0;
-        float eps = 0.001;
+        float eps = 0.01;
         float answer[rows];
         float prevAnswer[rows];
         bool flag = true;
@@ -62,17 +62,20 @@ public:
                 }
             }
             for(int i = 0; i < rows; i++){
-                if(prevAnswer[i] - answer[i] > eps)
+                if(abs(prevAnswer[i] - answer[i]) < eps){
                     flag = false;
+                }
+
             }
             for(int i = 0; i < rows+1;i++)
                 prevAnswer[i] = answer[i];
             counter++;
         }while(flag);
-        for(float i: answer){
+        for(float i: prevAnswer){
             cout << i << endl;
         }
-        cout << counter << endl;
+        cout << "----" << endl;
+
     }
     static bool Check(float** matrix,int rows){
         bool flag = true;
